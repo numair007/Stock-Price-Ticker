@@ -1,0 +1,585 @@
+2024-09-12T04:46:30.562+05:30  INFO 12962 --- [track] [main] com.budget.track.TrackApplication        : Starting TrackApplication using Java 17.0.5 with PID 12962 (/Users/numair.ahmad/Downloads/track/target/classes started by numair.ahmad in /Users/numair.ahmad/Downloads/track)
+2024-09-12T04:46:30.563+05:30  INFO 12962 --- [track] [main] com.budget.track.TrackApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T04:46:31.178+05:30  INFO 12962 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T04:46:31.187+05:30  INFO 12962 --- [track] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T04:46:31.187+05:30  INFO 12962 --- [track] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T04:46:31.222+05:30  INFO 12962 --- [track] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T04:46:31.223+05:30  INFO 12962 --- [track] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
+2024-09-12T04:46:31.572+05:30  INFO 12962 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T04:46:31.597+05:30  INFO 12962 --- [track] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-stock-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = stock-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-09-12T04:46:31.628+05:30  INFO 12962 --- [track] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-09-12T04:46:31.705+05:30  INFO 12962 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-09-12T04:46:31.706+05:30  INFO 12962 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-09-12T04:46:31.706+05:30  INFO 12962 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726096591705
+2024-09-12T04:46:31.708+05:30  INFO 12962 --- [track] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Subscribed to topic(s): stock-price
+2024-09-12T04:46:31.717+05:30  INFO 12962 --- [track] [main] com.budget.track.TrackApplication        : Started TrackApplication in 1.41 seconds (process running for 1.63)
+2024-09-12T04:46:31.900+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cluster ID: 9d0LgAm-SF6np0K0XSSaVg
+2024-09-12T04:46:31.901+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T04:46:31.903+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T04:46:31.922+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: need to re-join with the given member-id: consumer-stock-group-1-d297cf4f-fc26-4599-a5d3-3570f5eb09e2
+2024-09-12T04:46:31.922+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T04:46:31.926+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully joined group with generation Generation{generationId=8, memberId='consumer-stock-group-1-d297cf4f-fc26-4599-a5d3-3570f5eb09e2', protocol='range'}
+2024-09-12T04:46:31.929+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Finished assignment for group at generation 8: {consumer-stock-group-1-d297cf4f-fc26-4599-a5d3-3570f5eb09e2=Assignment(partitions=[stock-price-0])}
+2024-09-12T04:46:31.939+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully synced group in generation Generation{generationId=8, memberId='consumer-stock-group-1-d297cf4f-fc26-4599-a5d3-3570f5eb09e2', protocol='range'}
+2024-09-12T04:46:31.939+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Notifying assignor about the new Assignment(partitions=[stock-price-0])
+2024-09-12T04:46:31.940+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Adding newly assigned partitions: stock-price-0
+2024-09-12T04:46:31.947+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition stock-price-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.2.113:9092 (id: 0 rack: null)], epoch=0}}
+2024-09-12T04:46:31.947+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions assigned: [stock-price-0]
+2024-09-12T05:05:56.398+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Disconnecting from node 0 due to request timeout.
+2024-09-12T05:05:56.423+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cancelled in-flight FETCH request with correlation id 415 due to node 0 being disconnected (elapsed time since creation: 988184ms, elapsed time since send: 988183ms, request timeout: 30000ms)
+2024-09-12T05:05:56.426+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:05:56.427+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:05:56.427+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T05:05:56.426+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Error sending fetch request (sessionId=1103607932, epoch=346) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-09-12T05:05:56.501+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:21:12.192+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:21:12.280+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:21:12.300+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T05:21:12.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:21:12.308+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:21:12.308+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:21:12.407+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:36:30.218+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:36:30.281+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:36:30.282+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T05:36:30.345+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:53:44.180+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:53:44.288+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:53:44.289+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T05:53:44.296+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:53:44.296+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T05:53:44.296+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T05:53:44.416+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:10:15.181+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:10:15.293+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:10:15.293+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T06:10:15.321+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:10:15.321+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:10:15.321+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:10:15.420+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:28:00.192+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:28:00.295+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:28:00.296+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T06:28:00.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:28:00.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:28:00.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:28:00.412+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:43:38.189+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:43:38.190+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:43:38.190+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T06:43:38.194+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:43:38.195+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:43:38.195+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:43:38.302+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:50:21.200+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:50:21.299+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:50:21.300+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T06:50:21.315+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:50:21.315+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T06:50:21.315+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T06:50:21.420+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:05:27.190+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:05:27.301+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:05:27.301+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T07:05:27.366+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:21:16.420+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:21:16.428+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:21:16.429+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T07:21:16.445+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:21:16.447+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:21:16.448+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:21:16.559+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:39:16.052+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Disconnecting from node 0 due to request timeout.
+2024-09-12T07:39:16.173+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cancelled in-flight FETCH request with correlation id 603 due to node 0 being disconnected (elapsed time since creation: 1074879ms, elapsed time since send: 1074879ms, request timeout: 30000ms)
+2024-09-12T07:39:16.175+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:39:16.175+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:39:16.175+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T07:39:16.174+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Error sending fetch request (sessionId=1608168528, epoch=115) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-09-12T07:39:16.212+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:39:16.212+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:39:16.212+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:39:16.304+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:51:21.232+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:51:21.235+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:51:21.235+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T07:51:21.258+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:51:21.258+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T07:51:21.258+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T07:51:21.376+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:07:00.265+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:07:00.266+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:07:00.266+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T08:07:00.270+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:07:00.270+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:07:00.270+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:07:00.358+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:23:25.285+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:23:25.287+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:23:25.288+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T08:23:25.306+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:23:25.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:23:25.307+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:23:25.429+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:39:02.145+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Disconnecting from node 0 due to request timeout.
+2024-09-12T08:39:02.146+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cancelled in-flight FETCH request with correlation id 678 due to node 0 being disconnected (elapsed time since creation: 932059ms, elapsed time since send: 932059ms, request timeout: 30000ms)
+2024-09-12T08:39:02.146+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:39:02.146+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Error sending fetch request (sessionId=1674968034, epoch=44) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-09-12T08:39:02.147+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:39:02.252+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T08:39:02.293+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:39:02.293+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:39:02.293+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:39:02.387+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:52:21.167+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T08:52:21.168+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T08:52:21.168+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T08:52:21.274+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:07:56.318+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:07:56.325+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:07:56.326+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T09:07:56.333+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:07:56.334+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:07:56.334+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:07:56.439+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:25:34.209+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:25:34.306+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:25:34.307+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T09:25:34.327+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:25:34.327+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:25:34.327+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:25:34.428+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:42:59.207+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:42:59.208+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:42:59.208+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T09:42:59.214+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:42:59.214+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:42:59.215+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:42:59.339+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:53:21.406+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T09:53:21.625+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T09:53:21.625+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T09:53:21.751+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:10:43.485+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T10:10:43.486+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:10:43.486+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T10:10:43.488+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:10:43.488+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T10:10:43.488+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:10:43.591+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:22:33.090+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Disconnecting from node 0 due to request timeout.
+2024-09-12T10:22:33.341+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cancelled in-flight FETCH request with correlation id 823 due to node 0 being disconnected (elapsed time since creation: 704905ms, elapsed time since send: 704905ms, request timeout: 30000ms)
+2024-09-12T10:22:33.445+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-09-12T10:22:33.446+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Requesting disconnect from last known coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:22:33.446+05:30  INFO 12962 --- [track] [kafka-coordinator-heartbeat-thread | stock-group] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Client requested disconnect from node 2147483647
+2024-09-12T10:22:33.442+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Error sending fetch request (sessionId=1960899940, epoch=92) to node 0:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2024-09-12T10:22:33.514+05:30  INFO 12962 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:26:18.910+05:30  INFO 12962 --- [track] [org.springframework.kafka.
+KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Node -1 disconnected.
+2024-09-12T10:40:40.051+05:30  INFO 19052 --- [track] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T10:40:40.051+05:30  INFO 19052 --- [track] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T10:40:40.053+05:30  INFO 19052 --- [track] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-12T10:45:14.679+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Revoke previously assigned partitions stock-price-0
+2024-09-12T10:45:14.681+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions revoked: [stock-price-0]
+2024-09-12T10:45:14.682+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Member consumer-stock-group-1-4a100ad6-310a-4735-9f50-a0aa3648416a sending LeaveGroup request to coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-09-12T10:45:14.682+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:45:14.682+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:45:14.683+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Unsubscribed all topics or patterns and assigned partitions
+2024-09-12T10:45:14.685+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:45:14.685+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:45:15.023+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-12T10:45:15.023+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-12T10:45:15.023+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-09-12T10:45:15.023+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-12T10:45:15.029+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-stock-group-1 unregistered
+2024-09-12T10:45:15.029+05:30  INFO 19052 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: Consumer stopped
+2024-09-12T10:45:16.374+05:30  INFO 21927 --- [track] [main] com.budget.track.TrackApplication        : Starting TrackApplication using Java 17.0.5 with PID 21927 (/Users/numair.ahmad/Downloads/track/target/classes started by numair.ahmad in /Users/numair.ahmad/Downloads/track)
+2024-09-12T10:45:16.375+05:30  INFO 21927 --- [track] [main] com.budget.track.TrackApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T10:45:16.930+05:30  INFO 21927 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T10:45:16.939+05:30  INFO 21927 --- [track] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T10:45:16.939+05:30  INFO 21927 --- [track] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T10:45:16.979+05:30  INFO 21927 --- [track] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T10:45:16.980+05:30  INFO 21927 --- [track] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 582 ms
+2024-09-12T10:45:17.313+05:30  INFO 21927 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T10:45:17.336+05:30  INFO 21927 --- [track] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-stock-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = stock-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-09-12T10:45:17.363+05:30  INFO 21927 --- [track] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-09-12T10:45:17.440+05:30  INFO 21927 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-09-12T10:45:17.440+05:30  INFO 21927 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-09-12T10:45:17.441+05:30  INFO 21927 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726118117439
+2024-09-12T10:45:17.443+05:30  INFO 21927 --- [track] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Subscribed to topic(s): stock-price
+2024-09-12T10:45:17.452+05:30  INFO 21927 --- [track] [main] com.budget.track.TrackApplication        : Started TrackApplication in 1.316 seconds (process running for 1.52)
+2024-09-12T10:45:17.613+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cluster ID: 9d0LgAm-SF6np0K0XSSaVg
+2024-09-12T10:45:17.613+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:45:17.614+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T10:45:17.631+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: need to re-join with the given member-id: consumer-stock-group-1-74198c3d-14db-466e-af99-1f23b8e8a544
+2024-09-12T10:45:17.631+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T10:45:17.636+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully joined group with generation Generation{generationId=12, memberId='consumer-stock-group-1-74198c3d-14db-466e-af99-1f23b8e8a544', protocol='range'}
+2024-09-12T10:45:17.639+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Finished assignment for group at generation 12: {consumer-stock-group-1-74198c3d-14db-466e-af99-1f23b8e8a544=Assignment(partitions=[stock-price-0])}
+2024-09-12T10:45:17.645+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully synced group in generation Generation{generationId=12, memberId='consumer-stock-group-1-74198c3d-14db-466e-af99-1f23b8e8a544', protocol='range'}
+2024-09-12T10:45:17.646+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Notifying assignor about the new Assignment(partitions=[stock-price-0])
+2024-09-12T10:45:17.647+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Adding newly assigned partitions: stock-price-0
+2024-09-12T10:45:17.652+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition stock-price-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.2.113:9092 (id: 0 rack: null)], epoch=0}}
+2024-09-12T10:45:17.653+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions assigned: [stock-price-0]
+2024-09-12T10:45:27.482+05:30  INFO 21927 --- [track] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T10:45:27.482+05:30  INFO 21927 --- [track] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T10:45:27.484+05:30  INFO 21927 --- [track] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-12T10:46:25.791+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Revoke previously assigned partitions stock-price-0
+2024-09-12T10:46:25.792+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions revoked: [stock-price-0]
+2024-09-12T10:46:25.793+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Member consumer-stock-group-1-74198c3d-14db-466e-af99-1f23b8e8a544 sending LeaveGroup request to coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-09-12T10:46:25.794+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:46:25.794+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:46:25.794+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Unsubscribed all topics or patterns and assigned partitions
+2024-09-12T10:46:25.796+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:46:25.796+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:46:26.014+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-12T10:46:26.014+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-12T10:46:26.014+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-09-12T10:46:26.014+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-12T10:46:26.017+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-stock-group-1 unregistered
+2024-09-12T10:46:26.017+05:30  INFO 21927 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: Consumer stopped
+2024-09-12T10:46:29.295+05:30  INFO 22418 --- [track] [main] com.budget.track.TrackApplication        : Starting TrackApplication using Java 17.0.5 with PID 22418 (/Users/numair.ahmad/Downloads/track/target/classes started by numair.ahmad in /Users/numair.ahmad/Downloads/track)
+2024-09-12T10:46:29.297+05:30  INFO 22418 --- [track] [main] com.budget.track.TrackApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-09-12T10:46:29.844+05:30  INFO 22418 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-12T10:46:29.851+05:30  INFO 22418 --- [track] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-12T10:46:29.851+05:30  INFO 22418 --- [track] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-12T10:46:29.886+05:30  INFO 22418 --- [track] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-12T10:46:29.887+05:30  INFO 22418 --- [track] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2024-09-12T10:46:30.208+05:30  INFO 22418 --- [track] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-12T10:46:30.230+05:30  INFO 22418 --- [track] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-stock-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = stock-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-09-12T10:46:30.265+05:30  INFO 22418 --- [track] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-09-12T10:46:30.337+05:30  INFO 22418 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-09-12T10:46:30.337+05:30  INFO 22418 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-09-12T10:46:30.337+05:30  INFO 22418 --- [track] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1726118190336
+2024-09-12T10:46:30.339+05:30  INFO 22418 --- [track] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Subscribed to topic(s): stock-price
+2024-09-12T10:46:30.348+05:30  INFO 22418 --- [track] [main] com.budget.track.TrackApplication        : Started TrackApplication in 1.286 seconds (process running for 1.465)
+2024-09-12T10:46:30.499+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Cluster ID: 9d0LgAm-SF6np0K0XSSaVg
+2024-09-12T10:46:30.499+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Discovered group coordinator 192.168.2.113:9092 (id: 2147483647 rack: null)
+2024-09-12T10:46:30.500+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T10:46:30.515+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: need to re-join with the given member-id: consumer-stock-group-1-81add366-9126-4e89-9153-beb69000bef0
+2024-09-12T10:46:30.515+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] (Re-)joining group
+2024-09-12T10:46:30.518+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully joined group with generation Generation{generationId=14, memberId='consumer-stock-group-1-81add366-9126-4e89-9153-beb69000bef0', protocol='range'}
+2024-09-12T10:46:30.521+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Finished assignment for group at generation 14: {consumer-stock-group-1-81add366-9126-4e89-9153-beb69000bef0=Assignment(partitions=[stock-price-0])}
+2024-09-12T10:46:30.524+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Successfully synced group in generation Generation{generationId=14, memberId='consumer-stock-group-1-81add366-9126-4e89-9153-beb69000bef0', protocol='range'}
+2024-09-12T10:46:30.525+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Notifying assignor about the new Assignment(partitions=[stock-price-0])
+2024-09-12T10:46:30.526+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Adding newly assigned partitions: stock-price-0
+2024-09-12T10:46:30.532+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition stock-price-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.2.113:9092 (id: 0 rack: null)], epoch=0}}
+2024-09-12T10:46:30.533+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions assigned: [stock-price-0]
+2024-09-12T10:46:40.607+05:30  INFO 22418 --- [track] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12T10:46:40.608+05:30  INFO 22418 --- [track] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-12T10:46:40.609+05:30  INFO 22418 --- [track] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-12T10:51:39.857+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Revoke previously assigned partitions stock-price-0
+2024-09-12T10:51:39.864+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: partitions revoked: [stock-price-0]
+2024-09-12T10:51:39.865+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Member consumer-stock-group-1-81add366-9126-4e89-9153-beb69000bef0 sending LeaveGroup request to coordinator 192.168.2.113:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-09-12T10:51:39.866+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:51:39.866+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:51:39.866+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Unsubscribed all topics or patterns and assigned partitions
+2024-09-12T10:51:39.871+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-09-12T10:51:39.871+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stock-group-1, groupId=stock-group] Request joining group due to: consumer pro-actively leaving the group
+2024-09-12T10:51:40.027+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-09-12T10:51:40.027+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-09-12T10:51:40.027+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-09-12T10:51:40.027+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-09-12T10:51:40.032+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-stock-group-1 unregistered
+2024-09-12T10:51:40.033+05:30  INFO 22418 --- [track] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stock-group: Consumer stopped
