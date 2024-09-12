@@ -1,8 +1,7 @@
 # Real-Time Stock Price Ticker System
 
 ## Project Overview
-The **Real-Time Stock Price Ticker System** fetches live stock prices and updates them in real time using **Spring Boot**, **Kafka**, **Redis**, and **APIs**. This project is designed to demonstrate the integration of various components to handle real-time data processing with a focus on efficiency and scalability.
-
+The **Real-Time Stock Price Ticker System** fetches live stock prices and updates them in real time using **Spring Boot**, **Kafka**, **Redis**, and **APIs**. 
 ## Features
 - Fetches live stock prices using external APIs.
 - Uses **Kafka** for message streaming to ensure real-time updates.
